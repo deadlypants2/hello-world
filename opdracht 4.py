@@ -33,3 +33,4 @@ elif 25 <= bmi <= 50:
     print("wat vaker naar de sportschool zou misschien wel goed voor je zijn")
 else:
     print("de opgegeven informatie is incorect.\nProbeer het opnieuw")
+
