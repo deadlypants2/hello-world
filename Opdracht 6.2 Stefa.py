@@ -6,7 +6,7 @@ def start_vraag():
 
 # Voor keuze 1 word per persoon veel plezier geprint
 
-if keuze == "1" :
+if keuze == "1":
     aantal = int(input("met hoeveel personen wilt u komen?"))
     while state < aantal:
         state +=1
@@ -14,7 +14,7 @@ if keuze == "1" :
 
 # Keuze 2 eindigd met een bericht
 
-elif keuze == "2" :
+elif keuze == "2":
     print("Oke doei doei")
 
 else:
