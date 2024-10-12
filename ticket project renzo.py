@@ -11,22 +11,32 @@ while repeat < ask:
 '''
 
 from datetime import date
-date=date.today()
+from time import sleep
 
+date = date.today()
+from datetime import date as DateClass, timedelta
 
+# Huidige datum
+vandaag = DateClass.today()
 repeat = 0
-dierentuin = int(input("Ga jij Naar de Dierentuin? \n 1 = Ja \n 2 = nee \n: "))
+dierentuin = input("Ga jij Naar de Dierentuin?: ")
 
-
-if dierentuin == 1:
+if dierentuin == "ja" or dierentuin == "Ja":
+    sleep(1)
     print("Leuk!")
     aantalm = int(input("Met hoeveel mensen ga je\n: "))
+    dagen = int(input("Over hoeveel dagen ga je?: "))
+    tijdsdelta = timedelta(days=dagen)
+    ticketdatum = vandaag + tijdsdelta
+
     while repeat < aantalm:
-        repeat +=1
-        print("ticket nummer:","DT -", date,"-", repeat, "\nActief Vanaf : ", date, "\n")
-elif dierentuin==2:
+        sleep(1)
+        repeat += 1
+        print("ticket nummer: DT-{}_{}\nActief Vanaf: {}\n".format(vandaag.strftime("%Y-%m-%d"), repeat, ticketdatum.strftime("%Y-%m-%d")))
+elif dierentuin == "nee" or dierentuin == "Nee":
     print("Jammer")
-elif dierentuin==0:
-    print("Niet doen!")
+
+
 else:
-    print("Ongeldig antwoord")
+    print("Ongeldig antwoord. Voer 1 of 2 in:")
+

@@ -1,24 +1,26 @@
-# Ik defineer de stand naar 0
-state = 0
-# Geef de klanten een keuze tussen 2 opties
-def start_vraag():
-    keuze = input("wil je naar de dierentuin ?\n\n1.Ja\n2.Nee\nKies 1 of 2")
+def start_script():
+    state = 0
 
-# Voor keuze 1 word per persoon veel plezier geprint
+    while True: # blijft het lopen todat er een geldig antwoord wordt gegeven
+        keuze = input("Wil je naar de dierentuin?\n\n1. Ja\n2. Nee\nKies 1 of 2: ")
 
-if keuze == "1":
-    aantal = int(input("met hoeveel personen wilt u komen?"))
-    while state < aantal:
-        state +=1
-        print("Veel plezier!")
+        if keuze == "1":
+            aantal = int(input("Met hoeveel personen wilt u komen? "))
+            while state < aantal:
+                state += 1
+                print("Veel plezier!")
 
-# Keuze 2 eindigd met een bericht
+            opnieuw = input("Wil je opnieuw beginnen? (ja/nee): ")
+            if opnieuw.lower() == "ja":
+                start_script()  # opnieuw het script starten
+            else:
+                print("Programma beëindigd.")
+                break  # stopt loop
+        elif keuze == "2":
+            print("Oke doei doei")
+            break  # stopt de loop
+        else:
+            print("Ongeldige invoer, probeer opnieuw.")  # promt verbetering
 
-elif keuze == "2":
-    print("Oke doei doei")
-
-else:
-    print("Ongeldige invoer")
-    start_vraag()
-
-
+# Start the script
+start_script()
