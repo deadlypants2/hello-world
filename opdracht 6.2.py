@@ -9,4 +9,4 @@ if vraag=="ja":
     for i in range(ask):
         print("Veel plezier!")
 else:
-    print("Een fijne dag verderr gewenst.")
+    print("Een fijne dag verder gewenst.")
