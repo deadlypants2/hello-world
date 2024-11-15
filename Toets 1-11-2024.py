@@ -39,8 +39,8 @@ if aantal.isdigit():
 #print de levertijd en geef aan waneer er geen GPU besteld is.
 if aantalint > 0:
     if aantalint < 10: print("De levertijd van uw bestelling bevat 3 dagen.")
-    elif aantalint >= 10 and aantalint < 20: print("De levertijd van uw bestelling bevat 1 week.")
-    elif aantalint >= 21 and aantalint < 50: print("De levertijd van uw bestelling bevat 2 weken.")
+    elif 10 <= aantalint < 20: print("De levertijd van uw bestelling bevat 1 week.")
+    elif 21 <= aantalint < 50: print("De levertijd van uw bestelling bevat 2 weken.")
     elif aantalint >= 50: print("Neem a.u.b. contact op met Nvidia voor uw bestelling.")
 else:
     print("Voer het juiste aantal in a.u.b.")
